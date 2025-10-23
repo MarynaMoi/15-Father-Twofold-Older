@@ -33,9 +33,5 @@ const countTwofold = function (fatherAge, sonAge) {
   }
 };
 
-countTwofold(100, 90);
-countTwofold(100, 50);
-countTwofold(100, -1);
-countTwofold(-100, 1);
-countTwofold(100.5, 80);
-countTwofold(16, 1);
+countTwofold(100, 80);
+
