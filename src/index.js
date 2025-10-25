@@ -24,11 +24,11 @@ const countTwofold = function (fatherAge, sonAge) {
 /**
  *
  * @param {number} years - повертається з функції countTwofold
- * @returns {string} визначає граматичні форму слова "рік"
+ * @returns {string} визначає граматичну форму слова "рік"
  */
 
 const getWordYear = function (years) {
-  const yearsString = String(Math.abs(years));
+  const yearsString = String(years);
   if (years < 10 || years > 20) {
     switch (yearsString[yearsString.length - 1]) {
       case "1":
@@ -44,7 +44,7 @@ const getWordYear = function (years) {
   return "років";
 };
 
-const fatherAge = 63;
+const fatherAge = 38;
 const sonAge = 20;
 
 console.log(`Сьогодні Батьку: ${fatherAge}, а Сину: ${sonAge}`);
@@ -54,16 +54,14 @@ if (Number.isNaN(years)) {
   console.log(" Дані введено некоректно");
 } else if (years === 0) {
   console.log("Сьогодні Батьку вдвічі більше років, ніж Сину");
-} else {
-  if (years > 0) {
-    console.log(
-      `Через ${years} ${getWordYear(years)} Батько буде вдвічі старше за Сина`
-    );
-  } else if (years < 0) {
-    console.log(
-      `${Math.abs(years)} ${getWordYear(
-        years
-      )} тому Батько був  вдвічі старше за Сина`
-    );
-  }
+} else if (years > 0) {
+  console.log(
+    `Через ${years} ${getWordYear(years)} Батько буде вдвічі старше за Сина`
+  );
+} else if (years < 0) {
+  console.log(
+    `${Math.abs(years)} ${getWordYear(
+      years
+    )} тому Батько був  вдвічі старше за Сина`
+  );
 }
