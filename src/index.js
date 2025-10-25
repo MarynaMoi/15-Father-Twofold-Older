@@ -26,25 +26,22 @@ const countTwofold = function (fatherAge, sonAge) {
  * @param {number} years - повертається з функції countTwofold
  * @returns {string} визначає граматичні форму слова "рік"
  */
+
 const getWordYear = function (years) {
-  let wordYears = "років";
   const yearsString = String(Math.abs(years));
-  console.log(yearsString);
   if (years < 10 || years > 20) {
     switch (yearsString[yearsString.length - 1]) {
       case "1":
-        wordYears = "рік";
-        break;
+        return "рік";
       case "2":
       case "3":
       case "4":
-        wordYears = "роки";
-        break;
+        return "роки";
       default:
-        wordYears = "років";
+        return "років";
     }
   }
-  return wordYears;
+  return "років";
 };
 
 const fatherAge = 63;
